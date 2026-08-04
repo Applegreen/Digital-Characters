@@ -88,4 +88,79 @@ main {
   border: 1px solid rgba(255, 106, 26, 0.35);
 }
 
-.range-input::-moz-range-thumb
+.range-input::-moz-range-thumb {
+  height: 12px; width: 12px; border-radius: 9999px;
+  background: theme('colors.accent');
+  box-shadow: 0 0 0 3px rgba(255, 106, 26, 0.15);
+  border: 1px solid rgba(255, 106, 26, 0.35);
+}
+
+.range-input:focus-visible::-webkit-slider-thumb { outline: 2px solid theme('colors.ring'); }
+.range-input:focus-visible::-moz-range-thumb { outline: 2px solid theme('colors.ring'); }
+
+/* ===== Digital Characters — dark overhaul overrides ===== */
+/* Darken any hardcoded-light backgrounds */
+.bg-white,
+[class*="bg-gray-50"], [class*="bg-gray-100"], [class*="bg-gray-200"],
+[class*="bg-slate-50"], [class*="bg-slate-100"], [class*="bg-slate-200"],
+[class*="bg-neutral-50"], [class*="bg-neutral-100"],
+[class*="bg-zinc-50"], [class*="bg-zinc-100"] {
+  background-color: #141417 !important;
+  border-color: #2a2a30 !important;
+}
+
+/* Header / nav bar → dark glass with light text */
+header {
+  background-color: rgba(10,10,12,0.85) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #1e1e22 !important;
+}
+header a, header span, header button, header p, header li, header div {
+  color: #f3f1ec !important;
+}
+
+/* Any hardcoded dark text → light so it stays readable on dark */
+[class*="text-gray-900"], [class*="text-gray-800"], [class*="text-gray-700"],
+[class*="text-slate-900"], [class*="text-slate-800"], [class*="text-slate-700"],
+[class*="text-neutral-900"], [class*="text-neutral-800"], [class*="text-black"] {
+  color: #f3f1ec !important;
+}
+[class*="text-gray-600"], [class*="text-gray-500"], [class*="text-slate-600"], [class*="text-slate-500"] {
+  color: #b7b5ae !important;
+}
+
+/* ===== Round 2: neutralize light gradients & remaining light bands ===== */
+[class*="from-white"], [class*="to-white"], [class*="via-white"],
+[class*="from-gray-50"], [class*="to-gray-50"], [class*="via-gray-50"],
+[class*="from-gray-100"], [class*="to-gray-100"], [class*="via-gray-100"],
+[class*="from-gray-200"], [class*="to-gray-200"],
+[class*="from-slate-50"], [class*="to-slate-50"], [class*="from-slate-100"], [class*="to-slate-100"],
+[class*="from-neutral-100"], [class*="to-neutral-100"],
+[class*="from-zinc-100"], [class*="to-zinc-100"] {
+  --tw-gradient-from: #141417 !important;
+  --tw-gradient-via: #111114 !important;
+  --tw-gradient-to: #0a0a0c !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+/* Catch any leftover explicit light backgrounds set via arbitrary hex values */
+[class*="bg-[#f"], [class*="bg-[#F"], [class*="bg-[#e"], [class*="bg-[#E"] {
+  background-color: #141417 !important;
+}
+
+/* ===== Round 3: semi-transparent white panels & arbitrary gradients ===== */
+[class*="bg-white/"] {
+  background-color: rgba(20,20,23,0.65) !important;
+  border-color: #2a2a30 !important;
+}
+[class*="from-[#f"], [class*="from-[#F"], [class*="from-[#e"], [class*="from-[#E"],
+[class*="via-[#f"],  [class*="via-[#F"],  [class*="to-[#f"], [class*="to-[#F"] {
+  --tw-gradient-from: #141417 !important;
+  --tw-gradient-via: #111114 !important;
+  --tw-gradient-to: #0a0a0c !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+[class*="bg-[linear-gradient"], [class*="bg-[radial-gradient"], [class*="bg-[conic-gradient"] {
+  background-image: none !important;
+  background-color: #141417 !important;
+}
