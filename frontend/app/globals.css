@@ -6,7 +6,7 @@
 @import "@/styles/skeleton.css";
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
   --header-height: 72px;
 }
 
@@ -16,7 +16,7 @@
 
 body {
   @apply bg-bg text-text-primary antialiased font-sans;
-  background: linear-gradient(180deg, #F8F9FA 0%, #F3F5F7 100%);
+  background: linear-gradient(180deg, #0a0a0c 0%, #141417 100%);
 }
 
 a[href="https://dang.ai/"] {
@@ -36,8 +36,6 @@ a[href="https://dang.ai/"] {
   white-space: nowrap !important;
 }
 
-/* Add data-show-wavel-badge attribute to <html> to surface the badge for screenshots */
-
 main {
   min-height: 100vh;
 }
@@ -51,7 +49,7 @@ main {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(15, 23, 42, 0.18);
+  background: rgba(255, 255, 255, 0.18);
   border-radius: 9999px;
 }
 
@@ -68,21 +66,13 @@ main {
 }
 
 @keyframes mosaicDrift {
-  0% {
-    transform: translate3d(0%, 0%, 0) scale(1.05);
-  }
-  50% {
-    transform: translate3d(-4%, -3%, 0) scale(1.05);
-  }
-  100% {
-    transform: translate3d(0%, 0%, 0) scale(1.05);
-  }
+  0% { transform: translate3d(0%, 0%, 0) scale(1.05); }
+  50% { transform: translate3d(-4%, -3%, 0) scale(1.05); }
+  100% { transform: translate3d(0%, 0%, 0) scale(1.05); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -92,27 +82,18 @@ main {
 
 .range-input::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 12px;
-  width: 12px;
-  border-radius: 9999px;
+  height: 12px; width: 12px; border-radius: 9999px;
   background: theme('colors.accent');
-  box-shadow: 0 0 0 3px rgba(79, 93, 117, 0.15);
-  border: 1px solid rgba(79, 93, 117, 0.35);
+  box-shadow: 0 0 0 3px rgba(255, 106, 26, 0.15);
+  border: 1px solid rgba(255, 106, 26, 0.35);
 }
 
 .range-input::-moz-range-thumb {
-  height: 12px;
-  width: 12px;
-  border-radius: 9999px;
+  height: 12px; width: 12px; border-radius: 9999px;
   background: theme('colors.accent');
-  box-shadow: 0 0 0 3px rgba(79, 93, 117, 0.15);
-  border: 1px solid rgba(79, 93, 117, 0.35);
+  box-shadow: 0 0 0 3px rgba(255, 106, 26, 0.15);
+  border: 1px solid rgba(255, 106, 26, 0.35);
 }
 
-.range-input:focus-visible::-webkit-slider-thumb {
-  outline: 2px solid theme('colors.ring');
-}
-
-.range-input:focus-visible::-moz-range-thumb {
-  outline: 2px solid theme('colors.ring');
-}
+.range-input:focus-visible::-webkit-slider-thumb { outline: 2px solid theme('colors.ring'); }
+.range-input:focus-visible::-moz-range-thumb { outline: 2px solid theme('colors.ring'); }
