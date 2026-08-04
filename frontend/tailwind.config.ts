@@ -11,8 +11,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Geist"', '"Inter"', 'system-ui', 'sans-serif'],
-        display: ['"Geist"', '"Inter"', 'system-ui', 'sans-serif']
+        sans: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif']
       },
       colors: {
         bg: '#0a0a0c',
