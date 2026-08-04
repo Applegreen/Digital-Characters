@@ -15,22 +15,22 @@ const config: Config = {
         display: ['"Geist"', '"Inter"', 'system-ui', 'sans-serif']
       },
       colors: {
-        bg: '#F8F9FA',
-        surface: '#FFFFFF',
-        border: '#D1D5DB',
-        hairline: '#E5E7EB',
+        bg: '#0a0a0c',
+        surface: '#141417',
+        border: '#2a2a30',
+        hairline: '#1e1e22',
         text: {
-          primary: '#111111',
-          secondary: '#374151',
-          muted: '#6B7280'
+          primary: '#f3f1ec',
+          secondary: '#c9c7c0',
+          muted: '#8a8880'
         },
-        accent: '#4F5D75',
-        accentSoft: '#61708B',
-        ring: '#9DA7B8'
+        accent: '#ff6a1a',
+        accentSoft: '#ff8a4c',
+        ring: '#ff6a1a'
       },
       boxShadow: {
-        card: '0 1px 2px rgba(16,24,40,.06), 0 6px 16px rgba(16,24,40,.06)',
-        float: '0 6px 16px rgba(16,24,40,.08)'
+        card: '0 1px 2px rgba(0,0,0,.4), 0 6px 16px rgba(0,0,0,.4)',
+        float: '0 6px 16px rgba(0,0,0,.5)'
       },
       borderRadius: {
         card: '12px',
