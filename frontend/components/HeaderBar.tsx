@@ -36,7 +36,7 @@ export function HeaderBar() {
   const menuRef = useRef<HTMLDivElement>(null);
   const walletPromptCloseTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const walletPromptId = useId();
-  const brand = t('nav.brand', 'MaxVideo AI') ?? 'MaxVideo AI';
+  const brand = t('nav.brand', 'Noise-Generator by Digital Characters') ?? 'Noise-Generator by Digital Characters';
   const loginLabel = t('nav.login', 'Log in');
   const ctaLabel = t('nav.cta', 'Start a render');
   const generateLabel = t('nav.generate', 'Generate');
@@ -493,7 +493,7 @@ export function HeaderBar() {
               onClick={() => setMobileMenuOpen(false)}
               aria-label={t('workspace.header.logoAria', 'Go to marketing homepage')}
             >
-              <Image src="/assets/branding/logo-mark.svg" alt="MaxVideoAI" width={32} height={32} priority />
+              <Image src="/assets/branding/logo-mark.svg" alt="Noise-Generator by Digital Characters" width={32} height={32} priority />
               <span>{brand}</span>
             </Link>
             <button
@@ -592,8 +592,11 @@ function LogoMark() {
   const { t } = useI18n();
   return (
     <Link href="/" className="flex items-center gap-2" aria-label={t('workspace.header.logoAria', 'Go to marketing homepage')}>
-      <Image src="/assets/branding/logo-mark.svg" alt="MaxVideoAI" width={28} height={28} priority />
-      <span className="text-lg font-semibold tracking-tight text-text-primary">MaxVideo AI</span>
+      <Image src="/assets/branding/logo-mark.svg" alt="Noise-Generator by Digital Characters" width={28} height={28} priority />
+      <span className="flex flex-col leading-tight">
+        <span className="text-base font-semibold tracking-tight text-text-primary">Noise-Generator</span>
+        <span className="text-[10px] font-medium uppercase tracking-widest text-text-muted">by Digital Characters</span>
+      </span>
     </Link>
   );
 }
