@@ -10,6 +10,9 @@ import { SWRFocusResync } from '@/components/swr/SWRFocusResync';
 import { SWRProvider } from '@/components/swr/SWRProvider';
 import { I18nProvider } from '@/lib/i18n/I18nProvider';
 import { resolveDictionary } from '@/lib/i18n/server';
+
+export const dynamic = 'force-dynamic';
+
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ??
   process.env.SITE_URL ??
